@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        form{
+            background-color: gray;
+            margin-left: 500px;
+            width: 350px;
+            height: 250px;
+            margin-top: 15px;
+            border: 2px solid white;
+            box-shadow: 0 5px 8px black;
+        }
+
+        form h1{
+            color: wheat;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form label{
+            color:wheat;
+        }
+
+        form button{
+            background-color: orangered;
+            color: white;
+            font-size: 20px;
+            margin-left: 100px;
+            padding: 5px;
+        }
+    
+    </style>
 </head>
 <body>
     <header>
@@ -21,8 +51,8 @@
         </nav>
     </header>
     
-    <h1>Formulario </h1>
     <form>
+        <h1>Formulario </h1>
         <label for="">Nombre</label>
         <input type="text" placeholder="NOMBRE"><br>
         <label for="">Apellido</label>
@@ -44,8 +74,9 @@
             <option value="">Des BACKEND</option>
             <option value="">Lider de equipo</option>
             <option value="">Senior PYTHON</option>
-        </select><br>
-        <input type="button" value="Guardar">
+        </select><br><br>
+        <button type="button" value="Guardar">Guardar
+        
     </form>
 
 </body>
