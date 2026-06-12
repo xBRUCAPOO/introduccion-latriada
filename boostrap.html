@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réplicas de Airsoft | Tienda</title>
+    <title>Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
     <style>
@@ -12,8 +12,17 @@
             background-color: #121212;
             color: #e0e0e0;
         }
+        strong {
+            color: #ff0000;
+        }
+        a {
+            color: #ff6060 ;
+        }
+        i {
+            color: #808080 ;
+        }
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=1974&auto=format&fit=crop');
+            background: linear-gradient(rgba(0, 0, 0, 0.015), rgba(0, 0, 0, 0.015)), url('https://cdn2.steamgriddb.com/hero_thumb/57fb60bd7737412b1e8f63c3447dfc54.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -40,32 +49,50 @@
             color: #e0e0e0 !important;
         }
         .btn-primary {
-            background-color: #bb86fc;
-            border-color: #bb86fc;
+            background-color: #ff0000;
+            border-color: #ff0000;
         }
         .btn-primary:hover {
-            background-color: #a062d4;
-            border-color: #a062d4;
+            background-color: #ff0000;
+            border-color: #ff0000;
         }
         .btn-success {
-            background-color: #03dac6;
-            border-color: #03dac6;
+            background-color: #da0303;
+            border-color: #ff0000;
         }
         .btn-success:hover {
-            background-color: #02b8af;
-            border-color: #02b8af;
+            background-color: #ff0000;
+            border-color: #ff0000;
         }
         .carousel-item img {
-            height: 400px;
+            height: 200px;
             object-fit: cover;
         }
         .carousel-caption {
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px;
+            padding: 5px;
             border-radius: 5px;
+            font-size: 10px;
         }
         .section-title {
-            color: #bb86fc;
+            color: #ff0000;
+        }
+        /* Estilo para los indicadores del carrusel como líneas rojas */
+        .carousel-indicators {
+            bottom: -20px;
+            margin-bottom: 10px;
+        }
+        .carousel-indicators [data-bs-target] {
+            background-color: #ff0000;
+            border-radius: 0;
+            width: 30px;
+            height: 3px;
+            margin: 0 3px;
+            padding: 0;
+        }
+        .carousel-indicators .active {
+            background-color: #ff0000;
+            opacity: 1;
         }
     </style>
 </head>
@@ -75,7 +102,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Airsoft Réplicas
+                Probando Bootstrap
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +111,13 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#¿Como lo hice?">¿Como lo hice?</a></li>
+                    <a href="contenedor.html">Contenedor</a>
+                    <a href="lista.html">Listas</a>
+                    <a href="tabla.html">Tablas</a>
+                    <a href="formulario.html">Formulario</a>
+                    <a href="boostrap.html">Boostrap</a>
+                    <a href="https://xbrucapoo.github.io/Portfoleo-/">Portfolio</a>
                 </ul>
             </div>
         </div>
@@ -102,19 +135,27 @@
     <!-- Carrusel -->
     <section class="py-4">
         <div class="container">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://images.unsplash.com/photo-1591561954557-28e71b7a5800?q=80&w=2070&auto=format&fit=crop" class="d-block w-100" alt="Réplica M4">
+                        <img src="https://readyornot.wiki.gg/images/thumb/MK1.png/320px-MK1.png?88cba0" class="d-block w-100" alt="MK 1">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Réplica M4A1</h5>
-                            <p>Precisión y rendimiento en cada disparo.</p>
+                            <h5>MK 1</h5>
+                            <p>Este fusil de asalto tipo AR de calibre 5.56 es ligero, fácil de controlar y altamente personalizable. La herramienta de trabajo preferida por los agentes del aclamado Equipo de Rescate de Rehenes de la FISA.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop" class="d-block w-100" alt="Réplica AK-47">
+                        <img src="https://readyornot.wiki.gg/images/thumb/SR-16_.png/320px-SR-16_.png?97defa" class="d-block w-100" alt="SR-16">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Réplica AK-47</h5>
+                            <h5>SR-16</h5>
                             <p>Clásica y resistente para cualquier terreno.</p>
                         </div>
                     </div>
@@ -125,12 +166,33 @@
                             <p>Para jugadores estratégicos y de largo alcance.</p>
                         </div>
                     </div>
+                    <div class="carousel-item">
+                        <img src="https://readyornot.wiki.gg/images/thumb/MP5.png/320px-MP5.png?88cba0" class="d-block w-100" alt="MP5">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>MP5</h5>
+                            <p>Subfusil compacto y versátil, ideal para operaciones rápidas y cercanas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://readyornot.wiki.gg/images/thumb/G36C.png/320px-G36C.png?88cba0" class="d-block w-100" alt="G36C">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>G36C</h5>
+                            <p>Fusil de asalto moderno con diseño ergonómico y alta precisión.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://readyornot.wiki.gg/images/thumb/UMP-45.png/320px-UMP-45.png?88cba0" class="d-block w-100" alt="UMP-45">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>UMP-45</h5>
+                            <p>Subfusil potente y preciso, perfecto para situaciones tácticas.</p>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>
@@ -180,39 +242,29 @@
         </div>
     </section>
 
-    <!-- Ofertas -->
-    <section id="ofertas" class="py-5" style="background-color: #1e1e1e;">
+    <!-- ¿Como lo hice? -->
+    <section id="¿Como lo hice?" class="py-5" style="background-color: #1e1e1e;">
         <div class="container">
-            <h2 class="text-center mb-5 section-title">Ofertas Especiales</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4" style="background-color: #2d2d2d; color: #e0e0e0;">
-                        <div class="card-body">
-                            <h5 class="card-title">Kit de Inicio</h5>
-                            <p class="card-text">Incluye réplica M4, cargador, BBs y gafas de protección.</p>
-                            <p class="fw-bold text-success">$180.000 ARS <span class="text-muted text-decoration-line-through">$220.000 ARS</span></p>
-                            <button class="btn btn-success w-100">Comprar Ahora</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4" style="background-color: #2d2d2d; color: #e0e0e0;">
-                        <div class="card-body">
-                            <h5 class="card-title">Pack Táctico</h5>
-                            <p class="card-text">Réplica AK-47 + chaleco táctico + 5 cargadores.</p>
-                            <p class="fw-bold text-success">$250.000 ARS <span class="text-muted text-decoration-line-through">$300.000 ARS</span></p>
-                            <button class="btn btn-success w-100">Comprar Ahora</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="text-center mb-5 section-title">- Hola profe Franco -</h2>
+            <p>
+                buenas profe, esta página se ha realizado mayormente con  <a href="https://getbootstrap.com">Bootstrap</a>, no le voy a mentir, se me complicó hasta el punto de acudir a la 
+                <strong>IA</strong> para que me explique como aplicarlo correctamente, en este caso, la IA que utilicé fue <a href="https://chat.mistral.ai/chat">Mistral AI</a>.
+                <br><br>
+                Haciendo esta página descubrí que Bootstrap no es solo <strong>HTML</strong> <i>(que es lo que yo pensaba)</i>, sino también <strong>CSS</strong> y 
+                <strong>JavaScript</strong>.
+                <br><br>
+                Para hacer la página, los elementos de Bootstrap que utilicé son:
+                <br><span style="color: #ff0000;">•</span> <a href="https://chat.mistral.ai/chat">Re</a>
+                <br><span style="color: #ff0000;">•</span> <a href="https://chat.mistral.ai/chat">Punto</a>
+
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-3" style="background-color: #212121;">
         <div class="container text-center">
-            <p class="mb-0" style="color: #e0e0e0;">© 2026 Airsoft Réplicas. Todos los derechos reservados.</p>
+            <p class="mb-0" style="color: #e0e0e0;">Mistral IA | Bruno Valarolo ( BRUCA ) 6<sup>to</sup>E - 2026</p>
         </div>
     </footer>
 
