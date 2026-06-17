@@ -1,37 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostrap</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        strong {
+            color: #ff0000;
+        }
+        a {
+            color: #ff6060 ;
+        }
+        i {
+            color: #808080 ;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.015), rgba(0, 0, 0, 0.015)), url('https://cdn2.steamgriddb.com/hero_thumb/57fb60bd7737412b1e8f63c3447dfc54.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .product-card {
+            transition: transform 0.3s;
+            border: none;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .navbar {
+            background-color: #212121 !important;
+        }
+        .nav-link, .navbar-brand {
+            color: #e0e0e0 !important;
+        }
+        .btn-primary {
+            background-color: #ff0000;
+            border-color: #ff0000;
+        }
+        .btn-primary:hover {
+            background-color: #ff0000;
+            border-color: #ff0000;
+        }
+        .btn-success {
+            background-color: #da0303;
+            border-color: #ff0000;
+        }
+        .btn-success:hover {
+            background-color: #ff0000;
+            border-color: #ff0000;
+        }
+        .carousel-item img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .texto_chico{
+            font-size: 10px;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 10px;
+        }
+        .section-title {
+            color: #ff0000;
+        }
+        /* Estilo para los indicadores del carrusel como líneas rojas */
+        .carousel-indicators {
+            bottom: -20px;
+            margin-bottom: 10px;
+        }
+        .carousel-indicators [data-bs-target] {
+            background-color: #ff0000;
+            border-radius: 0;
+            width: 30px;
+            height: 3px;
+            margin: 0 3px;
+            padding: 0;
+        }
+        .carousel-indicators .active {
+            background-color: #ff0000;
+            opacity: 1;
+        }
+    </style>
 </head>
-
-<body class="fondo-boostrap">
-
-    <section id="#inicio" class="boostrap">
-
-        <nav class="navbar">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap" width="30" height="24">
+            <a class="navbar-brand" href="https://getbootstrap.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Probando Bootstrap
             </a>
-        <nav class="navbar">
-        <div class="container-fluid">
-                <a href="contenedor.html">Contenedor</a>
-                <a href="lista.html">Listas</a>
-                <a href="tabla.html">Tablas</a>
-                <a href="formulario.html">Formulario</a>
-                <a href="boostrap.html">Boostrap</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#¿Como lo hice?">¿Como lo hice?</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="contenedor.html">Contenedor</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="lista.html">Listas</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="tabla.html">Tablas</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="formulario.html">Formulario</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="https://xbrucapoo.github.io/Portfoleo-/">Portfolio</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
         </div>
-        </nav>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">L.S.P.D.</h1>
+            <p class="lead">Armamento de Los Sueños Police Departament.</p>
+            <p class="texto_chico">ⓘ Esta página es solo para los elementos del L.S.P.D. <i>(Los Sueños Police Departament)</i> si usted no forma parte, abandone le sitio inmediatamente, <br> <b>el no hacerlo puede tener consecuencias legales.</b></p>
+            <a href="#productos" class="btn btn-light btn-lg mt-3">Ver Catálogo</a>
+        </div>
     </section>
 
-</body>
+    <!-- Carrusel -->
+    <section class="py-4">
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://cdn2.steamgriddb.com/hero_thumb/f9018bbd4704cc171da8b3c8c7d65e00.jpg" class="d-block w-100" alt="MK 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>CQB</h5>
+                            <p>Armas de fuego ideales para combates en espacios cerrados.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn2.steamgriddb.com/hero_thumb/38b1499febaaf938ab1bd279a5cd26ba.jpg" class="d-block w-100" alt="SR-16">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Tirador designado</h5>
+                            <p>Rifles de precisión confiables y útiles para tiros certeros.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn2.steamgriddb.com/hero_thumb/b63f5641d0f58da69385e9bbbb990b1f.jpg" class="d-block w-100" alt="Réplica Sniper">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>No letal</h5>
+                            <p>Herraminetas no letales para reducir a un sospechoso sin violencia.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn2.steamgriddb.com/hero_thumb/ecf0d07e058ecacc30ce98f472debd01.jpg" class="d-block w-100" alt="MP5">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Escudos tácticos</h5>
+                            <p>Escudo a prueba de balas cruciales en los irrumpimiento para minimizar bajas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.ytimg.com/vi/1nyNQs-7Lh8/maxresdefault.jpg" class="d-block w-100" alt="G36C">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Accesorios tácticos</h5>
+                            <p>Movilidad. Manejo. Comodidad. Precisición y más. Los accesorios de un rifle dicen mucho sobre su portador</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn2.steamgriddb.com/hero_thumb/139821bf5b822d44ee4c506c540e108e.jpg" class="d-block w-100" alt="UMP-45">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Equipamiento táctico</h5>
+                            <p>Chalecos tácticos ligeros y pesados. Cinturones. Botas. Blindaje. Cascos y más. Un mal equipamiento puede terminar en una muerte.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Productos -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">- - - Categorías - - -</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <img src="https://static.wikia.nocookie.net/ready-or-not/images/8/88/MK1_AV.png/revision/latest?cb=20220626173118" class="card-img-top product-img" alt="Réplica M4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rifles de Asalto</h5>
+                            <p class="card-text">Son las armas más utilizadas por los soldados modernos. Existen distintos modelos según la misión y suelen aceptar numerosos accesorios, como miras, linternas o empuñaduras. Disparan munición de calibre intermedio, lo que les proporciona un equilibrio entre potencia, precisión y control del retroceso. Su alcance medio a largo y su versatilidad los convierten en una excelente opción para patrullas, operaciones tácticas y reconocimiento.</p>
+                            <p class="fw-bold">Reconocimiento, patrullaje, combate general y operaciones tácticas de media y larga distancia.</p>
+                            <button class="btn btn-primary w-100">Ver catálogo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <img src="https://static.wikia.nocookie.net/ready-or-not/images/a/a9/Mp5-10MM_AV.png/revision/latest/scale-to-width-down/1000?cb=20220626210239" class="card-img-top product-img" alt="Réplica AK-47">
+                        <div class="card-body">
+                            <h5 class="card-title">Subfusiles</h5>
+                            <p class="card-text">Son armas compactas que utilizan munición de pistola. Gracias a su tamaño reducido y bajo peso, resultan muy cómodas para desplazarse y operar en espacios cerrados, como edificios o vehículos. Aunque tienen menor alcance y potencia que los rifles de asalto, ofrecen una alta cadencia de fuego y gran maniobrabilidad, siendo útiles en operaciones urbanas y de protección cercana.</p>
+                            <p class="fw-bold">Combate en espacios cerrados, operaciones urbanas, protección de personal y trabajo en vehículos.</p>
+                            <button class="btn btn-primary w-100">Ver catálogo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <img src="https://static.wikia.nocookie.net/ready-or-not/images/b/bc/B1301_AV.png/revision/latest/scale-to-width-down/1000?cb=20220626211603" class="card-img-top product-img" alt="Réplica Sniper">
+                        <div class="card-body">
+                            <h5 class="card-title">Escopetas</h5>
+                            <p class="card-text">Son armas diseñadas principalmente para el combate a corta distancia. Pueden emplear distintos tipos de cartuchos según la necesidad de la misión. Su gran poder de impacto las hace efectivas en entornos cerrados y en tareas específicas, como el ingreso a edificios o la apertura de puertas. Sin embargo, su alcance efectivo es menor que el de los rifles y subfusiles.</p>
+                            <p class="fw-bold">CQB, Ingreso a edificios, apertura de puertas, reducción rápida.</p>
+                            <button class="btn btn-primary w-100">Ver catálogo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Como lo hice? -->
+    <section id="¿Como lo hice?" class="py-5" style="background-color: #1e1e1e;">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">- Hola profe Franco -</h2>
+            <p>
+                buenas profe, esta página se ha realizado mayormente con  <a href="https://getbootstrap.com">Bootstrap</a>, no le voy a mentir, se me complicó hasta el punto de acudir a la 
+                <strong>IA</strong> para que me explique como aplicarlo correctamente, en este caso, la IA que utilicé fue <a href="https://chat.mistral.ai/chat">Mistral AI</a>.
+                <br><br>
+                Haciendo esta página descubrí que Bootstrap no es solo <strong>HTML</strong> <i>(que es lo que yo pensaba)</i>, sino también <strong>CSS</strong> y 
+                <strong>JavaScript</strong>.
+                <br><br>
+                Para hacer la página, los elementos de Bootstrap que utilicé son:
+                <br><span style="color: #ff0000;">•</span> <a href="https://getbootstrap.com/docs/5.3/components/navbar/#brand">Navbar</a>
+                <br><span style="color: #ff0000;">•</span> <a href="https://getbootstrap.com/docs/5.3/components/carousel/#captions">Carrusel</a>
+                <br><span style="color: #ff0000;">•</span> <a href="https://getbootstrap.com/docs/5.3/components/buttons/#variants">Botones</a>
+                <br><span style="color: #ff0000;">•</span> <a href="https://getbootstrap.com/docs/5.3/components/card/#example">Tarjetal</a>
+                <br><span style="color: #ff0000;">•</span> <a href="https://getbootstrap.com/docs/5.3/utilities/colors/#colors">Colores</a>
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3" style="background-color: #212121;">
+        <div class="container text-center">
+            <p class="mb-0" style="color: #e0e0e0;">Mistral IA | Bruno Valarolo ( BRUCA ) 6<sup>to</sup>E - 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Interno -->
+    <script>
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Se clickeó el botón');
+            });
+        });
+    </script>
+</body>
 </html>

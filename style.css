@@ -56,10 +56,6 @@ nav a:hover{
     color: black;
 }
 
-.boostrap{
-    background-color: black;
-}
-
 /* MAIN */
 main{
     display: flex;
@@ -188,4 +184,8 @@ footer p{
     footer p{
         font-size: 18px;
     }
+}
+
+.boostrap{
+    background-color: rgb(24, 24, 24);
 }
